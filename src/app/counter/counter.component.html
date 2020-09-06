@@ -1,0 +1,15 @@
+<div class="container">
+    <h1 class="text-center">Contador con NgRx</h1>
+
+    <div class="d-flex mt-4 mb-4 justify-content-around">
+        <button class="btn btn-danger" (click)="decrement()">Decrement</button>
+        <h2>{{ count$ | async }}</h2>
+        <button class="btn btn-primary" (click)="increment()">Increment</button>
+    </div>
+    <div class="d-flex mt-4 justify-content-around">
+        <button class="btn btn-secondary mr-2" (click)="reset()">Reset</button>
+        <button class="btn btn-warning mr-2" (click)="random()">Random</button>
+        <input type="text" class="form-control mr-2" placeholder="number SET" [(ngModel)]="numSet" />
+        <button class="btn btn-warning mr-2" (click)="set(numSet)">Set</button>
+    </div>
+</div>
